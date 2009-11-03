@@ -1,0 +1,9 @@
+<billMeLaterRequest>
+  <bmlMerchantId>true:I:19</bmlMerchantId>
+  <bmlProductType>false:S:2</bmlProductType>
+  <termsAndConditions>false:I:5</termsAndConditions>
+  <preapprovalNumber>false:S:25</preapprovalNumber>
+  <virtualAuthenticationKeyPresenceIndicator>false:S:1</virtualAuthenticationKeyPresenceIndicator>
+  <virtualAuthenticationKeyData>false:S:5</virtualAuthenticationKeyData>
+  <itemCategoryCode>false:I:4</itemCategoryCode>
+</billMeLaterRequest>

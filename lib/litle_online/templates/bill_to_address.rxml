@@ -1,0 +1,12 @@
+<billToAddress>
+<name>false:S:100</name>
+<addressLine1>false:S:35</addressLine1>
+<addressLine2>false:S:35</addressLine2>
+<addressLine3>false:S:35</addressLine3>
+<city>false:S:35</city>
+<state>false:S:30</state>
+<zip>false:S:20</zip>
+<country>false:S:35</country>
+<email>false:S:100</email>
+<phone>false:S:20</phone>
+</billToAddress>

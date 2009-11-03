@@ -1,0 +1,13 @@
+<lineItemData>
+  <itemSequenceNumber>false:I:8</itemSequenceNumber>
+  <itemDescription>false:S:26</itemDescription>
+  <productCode>false:S:12</productCode>
+  <quantity>false:I:12</quantity>
+  <unitOfMeasure>false:S:12</unitOfMeasure>
+  <taxAmount>false:I:8</taxAmount>
+  <lineItemTotal>false:I:8</lineItemTotal>
+  <lineItemTotalWithTax>false:I:8</lineItemTotalWithTax>
+  <itemDiscountAmount>false:I:8</itemDiscountAmount>
+  <commodityCode>false:S:12</commodityCode>
+  <unitCost>false:I:12</unitCost>
+</lineItemData>

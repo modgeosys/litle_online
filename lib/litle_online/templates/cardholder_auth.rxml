@@ -1,0 +1,7 @@
+<cardholderAuthentication>
+  <authenticationValue>true:S:32</authenticationValue>
+  <authenticationTransactionId>false:S:28</authenticationTransactionId>
+  <customerIpAddress>true:S:20</customerIpAddress>
+  <authenticatedByMerchant>false:B</authenticatedByMerchant>
+  <authorizationSourcePlatform>false:M:A;B;C;F;M;P;R</authorizationSourcePlatform>
+</cardholderAuthentication>

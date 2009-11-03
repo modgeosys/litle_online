@@ -1,0 +1,96 @@
+litle_online
+    by Andrius Useckas
+    http://www.ckuru.com
+
+== DESCRIPTION:
+
+Litle gateway implementation for ActiveMerchant.
+
+== FEATURES/PROBLEMS:
+
+Allows to process credit cards through Litle gateway.
+
+== SYNOPSIS:
+
+  cc_visa_1 = ActiveMerchant::Billing::CreditCard.new(
+                                                         :first_name => 'Евгений',
+                                                         :last_name => 'Онегин',
+                                                         :number => '4457010000000009',
+                                                         :month => '01',
+                                                         :year => '2009',
+                                                         :type => 'visa',
+                                                         :verification_value => '349'
+                                                        )
+
+
+  # Initialize Litle Gateway
+  litle_gw = ActiveMerchant::Billing::LitleGateway.new(
+                                    :merchant_id => '00000',
+                                    :login => 'AAA',
+                                    :password => 'password'
+                                   )
+
+  # setup some options, only report_group and order_id are required.
+  options = {
+                 :report_group => 'Test Authorizations',
+                 :customer_id => 'Test Customer',
+                 :order_id => '1',
+                 :order_source => 'ecommerce',
+                 :billing_address => {
+                                        :address1 => "1 Main St.",
+                                        :city => "Burlington",
+                                        :state => "MA",
+                                        :zip => "01803-3747",
+                                        :country => "US",
+                                        :email => "test@test.com"
+                                     },
+                 :description => 'TST*Testing 123'
+
+            }
+
+  # Submit Authorization request.
+  puts
+  puts "Submitting test Authorization"
+  response = litle_gw.authorize(10010, cc_visa_1, options)
+
+  # Evaluate the results
+  if response.success?
+    puts
+    puts "Authorization approved with transaction id: #{response.authorization}. Fraud review:"
+    puts "AVS: #{response.avs_code} = #{response.avs_result}"
+    puts "CVV: #{response.cvv_code} = #{response.cvv_result}"
+
+    # Set up capture options.
+    options = {
+                 :report_group => 'Test Captures',
+                 :customer_id => 'Test Customer'
+              }
+    # Submit Capture request
+    puts
+    puts "Submitting test capture"
+    response = litle_gw.capture(10010, response.authorization, options)
+    if response.success?
+      puts
+      puts "Capture approved with transaction id: #{response.authorization}."
+    end
+  else
+    puts
+    puts "Authorization failed with message: #{response.message}"
+  end
+
+
+== REQUIREMENTS:
+
+ckuru-tools
+active_merchant
+rexml
+time
+net
+zlib
+
+== INSTALL:
+
+sudo gem install
+
+== LICENSE:
+

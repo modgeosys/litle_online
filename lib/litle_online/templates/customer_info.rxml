@@ -1,0 +1,13 @@
+<customerInfo>
+  <ssn>false:S:9</ssn>
+  <dob>false:D</dob>
+  <customerRegistrationDate>false:I:9</customerRegistrationDate>
+  <customerType>false:S:1</customerType>
+  <incomeAmount>false:I:20</incomeAmount>
+  <incomeCurrency>false:M:AUD;CAD;CHF;DKK;EUR;GBP;HKD;JPY;NOK;NZD;SEK;SGD;USD</incomeCurrency>
+  <employerName>false:S:20</employerName>
+  <customerWorkTelephone>false:S:20</customerWorkTelephone>
+  <residenceStatus>false:M:Own;Rent;Other</residenceStatus>
+  <yearsAtResidence>false:I:2</yearsAtResidence>
+  <yearsAtEmployer>false:I:2</yearsAtEmployer>
+</customerInfo>

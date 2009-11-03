@@ -1,0 +1,5 @@
+<payPal>
+  <payerId>true:S:2</payerId>
+  <token>value returned by the token</token>
+  <transactionId>PayPal transaction ID</transactionId>
+</payPal>

@@ -1,0 +1,6 @@
+<litleOnlineRequest version="7.0" xmlns="http://www.litle.com/schema" merchantId="Merchant identifier">
+<authentication>
+<user>User Name</user>
+<password>Password</password>
+</authentication>
+</litleOnlineRequest>

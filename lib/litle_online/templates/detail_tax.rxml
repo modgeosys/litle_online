@@ -1,0 +1,7 @@
+<detailTax>
+  <taxIncludedInTotal>false:B</taxIncludedInTotal>
+  <taxAmount>false:I:8</taxAmount>
+  <taxRate>false:I:5</taxRate>
+  <taxTypeIdentifier>false:M:00;01;02;03;04;05;06;10;11;12;13;14;20;21;22</taxTypeIdentifier>
+  <cardAcceptorTaxId>false:S:20</cardAcceptorTaxId>
+</detailTax>

@@ -1,0 +1,14 @@
+<enhancedData>
+  <customerReference>false:S:17</customerReference>
+  <deliveryType>false:M:CNC;DIG;PHY;SVC;TBD</deliveryType>
+  <salesTax>false:I:8</salesTax>
+  <taxExempt>false:B</taxExempt>
+  <discountAmount>false:I:8</discountAmount>
+  <shippingAmount>false:I:8</shippingAmount>
+  <dutyAmount>false:I:8</dutyAmount>
+  <shipFromPostalCode>false:S:20</shipFromPostalCode>
+  <destinationPostalCode>false:S:20</destinationPostalCode>
+  <destinationCountryCode>Ship To ISO Country Code</destinationCountryCode>
+  <invoiceReferenceNumber>false:S:15</invoiceReferenceNumber>
+  <orderDate>false:D</orderDate>
+</enhancedData>

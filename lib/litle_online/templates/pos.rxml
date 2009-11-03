@@ -1,0 +1,5 @@
+<pos>
+  <capability>true:M:notused;magstripe;keyedonly</capability>
+  <entryMode>true:M:notused;keyed;track1;track2;completeread</entryMode>
+  <cardholderId>true:M:signature;pin;nopin;directmarket</cardholderId>
+</pos>

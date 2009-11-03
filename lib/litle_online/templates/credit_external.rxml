@@ -1,0 +1,5 @@
+<credit id="" reportGroup="true:S:25" customerId="false:S:50">
+  <orderId>true:S:25</orderId>
+  <amount>false:I:8</amount>
+  <orderSource>true:M:3dsAuthenticated;3dsAttempted;ecommerce;installment;mailorder;recurring;retail;telephone</orderSource>
+</credit>
