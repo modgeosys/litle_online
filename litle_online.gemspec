@@ -30,7 +30,7 @@ extensions: []
 
 extra_rdoc_files: 
 - History.txt
-- README.txt
+- README
 - bin/litle_online
 - lib/litle_online/templates/auth_reversal.rxml
 - lib/litle_online/templates/authorization.rxml
@@ -56,7 +56,7 @@ extra_rdoc_files:
 - lib/litle_online/templates/void.rxml
 files: 
 - History.txt
-- README.txt
+- README
 - Rakefile
 - bin/litle_online
 - lib/litle_online.rb
@@ -109,7 +109,7 @@ licenses: []
 post_install_message: 
 rdoc_options: 
 - --main
-- README.txt
+- README
 require_paths: 
 - lib
 required_ruby_version: !ruby/object:Gem::Requirement 
