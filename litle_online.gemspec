@@ -1,7 +1,7 @@
 --- !ruby/object:Gem::Specification 
 name: litle_online
 version: !ruby/object:Gem::Version 
-  version: 1.0.2
+  version: 1.0.3
 platform: ruby
 authors: 
 - Andrius, Bret
