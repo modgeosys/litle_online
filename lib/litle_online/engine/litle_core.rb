@@ -139,6 +139,9 @@ module LitleOnline
     end
   
     def submit_transaction(transaction)
+      p "-----=====-----"
+      p "Litle URL: " + $litle_url
+      p transaction.to_s
       uri = URI.parse($litle_url)
       site = Net::HTTP.new(uri.host, uri.port)
       site.use_ssl = true
@@ -146,6 +149,8 @@ module LitleOnline
       data = transaction.to_s.gsub(/>[\n ]{2,20}</, ">\n<")
 #      puts data
       result = site.post($litle_path, data)
+      p result.body.to_s
+      p "-----=====-----"
       case result
         when Net::HTTPSuccess
 	  return result.body

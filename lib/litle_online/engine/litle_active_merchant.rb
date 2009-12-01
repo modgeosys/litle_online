@@ -2,6 +2,11 @@ require 'rexml/document'
 require 'active_merchant'
 
 
+class ActiveMerchant::Billing::CreditCard
+  include ActiveMerchant::Billing::CreditCardMethods
+end
+
+
 module ActiveMerchant #:nodoc:
   module Billing #:nodoc:
     class LitleGateway < Gateway 
@@ -12,8 +17,8 @@ module ActiveMerchant #:nodoc:
                                               :number => creditcard.number,
                                               :month => sprintf("%.2i", creditcard.month),
                                               :year => sprintf("%.4i", creditcard.year)[-2..-1],
-                                              :type => creditcard.type,
-					      :validation_number => creditcard.verification_value
+                                              :type => ActiveMerchant::Billing::CreditCard.type?(creditcard.number),
+					                                    :validation_number => creditcard.verification_value
                                             )
       end
 
@@ -317,7 +322,7 @@ module ActiveMerchant #:nodoc:
 	             :auth_code => result.auth_code
 		   }
 
-	unless result.fraud_result && result.fraud_result.avs_result.to_i < 10
+	if result.fraud_result && [12, 13, 20].include?(result.fraud_result.avs_result.to_i)
 	  result.response_code = "353" 
 	  result.message = "Merchant requested decline due to AVS result"
 	  return convert_response(result, custom_params)
