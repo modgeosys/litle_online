@@ -317,7 +317,7 @@ module ActiveMerchant #:nodoc:
 	             :auth_code => result.auth_code
 		   }
 
-	unless result.fraud_result.avs_result.to_i < 10
+	unless result.fraud_result && result.fraud_result.avs_result.to_i < 10
 	  result.response_code = "353" 
 	  result.message = "Merchant requested decline due to AVS result"
 	  return convert_response(result, custom_params)
