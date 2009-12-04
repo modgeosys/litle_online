@@ -1,4 +1,4 @@
-$litle_url = 'https://payments.litle.com'
+$litle_url = (ENV['RAILS_ENV'] == 'production' ? 'https://payments.litle.com' : 'https://cert.litle.com')
 $litle_path = '/vap/communicator/online'
 
 # Don not edit below this line
