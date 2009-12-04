@@ -1,6 +1,13 @@
 require 'rexml/document'
 require 'active_merchant'
 
+LITLE_CARD_TYPE = {'visa'             => 'VI',
+                   'master'           => 'MC',
+                   'discover'         => 'DI',
+                   'american_express' => 'AX',
+                   'diners_club'      => 'DC',
+                   'jcb'              => 'JCB'}
+
 
 class ActiveMerchant::Billing::CreditCard
   include ActiveMerchant::Billing::CreditCardMethods
@@ -17,9 +24,13 @@ module ActiveMerchant #:nodoc:
                                               :number => creditcard.number,
                                               :month => sprintf("%.2i", creditcard.month),
                                               :year => sprintf("%.4i", creditcard.year)[-2..-1],
-                                              :type => ActiveMerchant::Billing::CreditCard.type?(creditcard.number),
+                                              :type => litle_card_type(ActiveMerchant::Billing::CreditCard.type?(creditcard.number)),
 					                                    :validation_number => creditcard.verification_value
                                             )
+      end
+      
+      def litle_card_type(generic_card_type)
+        LITLE_CARD_TYPE[generic_card_type] || 'BL'
       end
 
       def fill_in_billing_name(options, creditcard)
