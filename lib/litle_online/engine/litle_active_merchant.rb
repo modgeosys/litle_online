@@ -30,7 +30,7 @@ module ActiveMerchant #:nodoc:
       end
       
       def litle_card_type(generic_card_type)
-        LITLE_CARD_TYPE[generic_card_type] || 'BL'
+        LITLE_CARD_TYPE[generic_card_type] || generic_card_type
       end
 
       def fill_in_billing_name(options, creditcard)
