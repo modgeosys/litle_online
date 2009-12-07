@@ -8,12 +8,13 @@ module LitleOnline
   
   private
     @@card_type = { 
-      'visa'			=> 'VI',
-      'mastercard'		=> 'MC',
-      'american_express'	=> 'AX',
-      'bill_me_later'		=> 'BL',
-      'discover'		=> 'DI',
-      'jcb'			=> 'JC'
+      'visa'			       => 'VI',
+      'master'		       => 'MC',
+      'american_express' => 'AX',
+      'bill_me_later'		 => 'BL',
+      'discover'		     => 'DI',
+      'diners_club'      => 'DC',
+      'jcb'			         => 'JC'
     }
 
     def validate_type
