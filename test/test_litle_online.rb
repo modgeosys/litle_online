@@ -98,7 +98,7 @@ emacs_trace do
                                                          :number => '5112010000000003',
                                                          :month => '02',
                                                          :year => '2009',
-                                                         :type => 'mastercard',
+                                                         :type => 'master',
 							 :verification_value => '261'
 							)
   # setup purchase options

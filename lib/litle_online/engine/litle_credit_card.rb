@@ -40,7 +40,7 @@ module LitleOnline
         when 'visa'
           return false unless (length == 13 || length == 16) && @number =~ /^4/
 	  
-        when 'mastercard'
+        when 'master'
           return false unless length == 16 && @number =~ /^5[1-5]/
 	    
         when 'american_express'
@@ -73,7 +73,7 @@ module LitleOnline
         when 'visa'
           return true if @validation_number =~ /^\d\d\d$/
 	    
-        when 'mastercard'
+        when 'master'
           return true if @validation_number =~ /^\d\d\d$/
   
         when 'discover'
