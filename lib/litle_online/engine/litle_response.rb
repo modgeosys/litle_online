@@ -121,7 +121,7 @@ module LitleOnline
 			   '716' => 'Invalid Auth',
 			   '717' => 'Authorization already exists for the order'
 			 }
-			   
+      end 			   
       
       def initialize(response_xml)
         xml_response_doc = REXML::Document.new(response_xml)
